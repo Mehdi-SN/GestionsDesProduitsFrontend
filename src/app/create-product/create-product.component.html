@@ -1,0 +1,30 @@
+<div class="col-md-8 offset-md-3">
+  <h3>Ajouter un nouveau produit</h3>
+  <form (ngSubmit) = "onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+      <label> Name </label>
+      <input type="text" class="form-control" id="name"
+             [(ngModel)]="product.name" name="name" required="true">
+    </div>
+    <div class="form-group">
+      <label> Description </label>
+      <input type="text" class="form-control" id="description"
+             [(ngModel)]="product.description" name="description" required="true">
+    </div>
+    <div class="form-group">
+      <label> Prix </label>
+      <input type="text" class="form-control" id="price"
+             [(ngModel)]="product.price" name="price" required="true">
+    </div>
+    <div class="form-group">
+      <label for="inStock"> Y a t-il en stock ? </label>
+        <select class="form-control" [(ngModel)]="product.inStock"  name="inStock" id="inStock"
+               required="true">
+        <option  value="oui">Oui</option>
+        <option  value="non" >Nom</option>
+      </select>
+    </div>
+    <button class="btn btn-success" type="submit" [disabled]="f.invalid" >Submit</button>
+  </form>
+</div>
+

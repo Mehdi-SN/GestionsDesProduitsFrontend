@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -124,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "Product-Project"
+  "defaultProject": "Product-Project",
+  "cli": {
+    "analytics": "57a7a627-4886-469a-ad45-001cd198424b"
+  }
 }

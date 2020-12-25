@@ -1,0 +1,26 @@
+
+
+<h2> Product List </h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Description</th>
+    <th scope="col">Price</th>
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products; let i = index">
+    <td> {{ product.name }}</td>
+    <td> {{ product.description }}</td>
+    <td> {{product.price }}</td>
+    <td> <button class="btn btn-danger" (click)="deleteProduct(product._id)">Delete</button></td>
+    <td> <button class="btn btn-success" (click)="viewProduct(product._id)">View</button></td>
+  </tr>
+  </tbody>
+
+</table>
+
+
